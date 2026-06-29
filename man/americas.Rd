@@ -44,6 +44,18 @@ map and a static ggplot2/Plotly map. The user can colour points by any of the
 supplied qualitative variables, size them by any of the supplied quantitative
 variables, shrink all markers with a slider, or show locations only.
 }
+\details{
+Notes:
+\itemize{
+\item Boundaries are the contiguous US states from the \strong{spData} package.
+\item Rows with NA values for longitude and latitude are automatically removed,
+with a warning message.
+\item Points with NA values for a quantitative variable are dropped from the
+size display.
+\item Points with NA values for a qualitative variable are shown in grey.
+\item Colours are generated automatically for any number of categories.
+}
+}
 \examples{
 if (interactive()) {
   df <- read.csv(

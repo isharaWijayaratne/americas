@@ -7,6 +7,17 @@
 #' supplied qualitative variables, size them by any of the supplied quantitative
 #' variables, shrink all markers with a slider, or show locations only.
 #'
+#' @details
+#' Notes:
+#'
+#' - Boundaries are the contiguous US states from the **spData** package.
+#' - Rows with NA values for longitude and latitude are automatically removed,
+#'   with a warning message.
+#' - Points with NA values for a quantitative variable are dropped from the
+#'   size display.
+#' - Points with NA values for a qualitative variable are shown in grey.
+#' - Colours are generated automatically for any number of categories.
+#'
 #' @param data A data frame containing the survey points.
 #' @param latitude Name of the latitude column, as a string (e.g. `"Latitude"`).
 #' @param longitude Name of the longitude column, as a string (e.g. `"Longitude"`).
