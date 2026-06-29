@@ -45,7 +45,6 @@ supplied qualitative variables, size them by any of the supplied quantitative
 variables, shrink all markers with a slider, or show locations only.
 }
 \details{
-Notes:
 \itemize{
 \item Boundaries are the contiguous US states from the \strong{spData} package.
 \item Rows with NA values for longitude and latitude are automatically removed,

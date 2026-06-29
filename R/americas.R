@@ -8,7 +8,6 @@
 #' variables, shrink all markers with a slider, or show locations only.
 #'
 #' @details
-#' Notes:
 #'
 #' - Boundaries are the contiguous US states from the **spData** package.
 #' - Rows with NA values for longitude and latitude are automatically removed,
