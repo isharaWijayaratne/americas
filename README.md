@@ -61,6 +61,9 @@ populate the "colour by" menu and the `quantitative` variables populate the
 ## Notes
 
 - Boundaries are the contiguous US states from the **spData** package.
+- Rows with NA values for longitude and latitude are automatically removed, with a warning message.
+- Points with NA values for a quantitative variable are dropped from the size display. 
+- Points with NA values for a qualitative variable are shown in grey.
 - Colours are generated automatically for any number of categories.
 
 
