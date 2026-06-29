@@ -60,7 +60,18 @@ americas <- function(data,
   radius_default <- radius_range[3]
 
   ## ---- Prepare spatial data ----
-  # Points -> sf (note: sf wants coords in x, y = longitude, latitude order).
+  # Drop rows with missing coordinates (st_as_sf cannot place them) and
+  # a message displays how many were rows were removed.
+  n_before  <- nrow(data)
+  data      <- data[!is.na(data[[latitude]]) & !is.na(data[[longitude]]), ,
+                    drop = FALSE]
+  n_dropped <- n_before - nrow(data)
+  if (n_dropped > 0) {
+    warning(sprintf("Removed %d row(s) with missing coordinates.", n_dropped),
+            call. = FALSE)
+  }
+
+  # points -> sf wants co-ordinates in (x, y) = (longitude, latitude) order
   survey_sf <- sf::st_as_sf(as.data.frame(data),
                             coords = c(longitude, latitude),
                             crs = 4326)
