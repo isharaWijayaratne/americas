@@ -27,3 +27,5 @@ Imports:
     stats
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
+URL: https://github.com/isharaWijayaratne/americas
+BugReports: https://github.com/isharaWijayaratne/americas/issues
