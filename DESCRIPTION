@@ -1,0 +1,29 @@
+Package: americas
+Title: Easy Interactive Maps of United States Survey Data
+Version: 0.1.0
+Authors@R:
+    person("Ishara", "Wijayaratne", email = "ishara.wijayaratne2512@gmail.com",
+           role = c("aut", "cre"))
+Description: A single function, americas(), that turns a data frame
+    with longitude and latitude columns into an interactive Shiny dashboard.
+    Points are drawn over United States state boundaries on both a dynamic
+    Leaflet map and a static ggplot2/Plotly map, coloured by any qualitative
+    variable and sized by any quantitative variable, with controls to shrink
+    the markers or show locations only.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Depends:
+    R (>= 4.1.0)
+Imports:
+    shiny,
+    shinydashboard,
+    leaflet,
+    sf,
+    spData,
+    ggplot2,
+    plotly,
+    scales,
+    rlang,
+    stats
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
