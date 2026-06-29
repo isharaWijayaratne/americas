@@ -9,6 +9,14 @@ The package exposes one main function, \code{\link[=americas]{americas()}}, whic
 interactive Shiny dashboard mapping a data frame of longitude/latitude
 points over US state boundaries.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/isharaWijayaratne/americas}
+  \item Report bugs at \url{https://github.com/isharaWijayaratne/americas/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Ishara Wijayaratne \email{ishara.wijayaratne2512@gmail.com}
 

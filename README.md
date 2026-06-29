@@ -1,5 +1,9 @@
 # americas <img src="man/figures/logo.png" align="right" height="120" alt="" />
 
+
+<br><br>
+
+
 **Easy interactive maps of United States survey data.**
 
 `americas` turns any data frame of geographic points (with longitude and
@@ -17,7 +21,22 @@ Installation of `americas` from GitHub requires the `devtools` package and can b
 devtools::install_github("isharaWijayaratne/americas")
 ```
 
-## Use
+
+## The function
+
+```r
+americas(data, latitude, longitude, qualitative, quantitative,
+         title = "Spatial Mapping", radius_range = c(2, 25, 20))
+```
+
+- `data` — a data frame of points.
+- `latitude`, `longitude` — coordinate column names (strings).
+- `qualitative` — categorical column names to colour by.
+- `quantitative` — numeric column names to size by.
+- `title` — dashboard header text.
+- `radius_range` — `c(min, max, default)` for the marker-size slider, in pixels.
+
+## Example
 
 ```r
 library(americas)
@@ -38,32 +57,10 @@ That call opens the dashboard in your browser. The `qualitative` variables
 populate the "colour by" menu and the `quantitative` variables populate the
 "size by" menu.
 
-## The function
-
-```r
-americas(data, latitude, longitude, qualitative, quantitative,
-         title = "Spatial Mapping", radius_range = c(2, 25, 20))
-```
-
-- `data` — a data frame of points.
-- `latitude`, `longitude` — coordinate column names (strings).
-- `qualitative` — categorical column names to colour by.
-- `quantitative` — numeric column names to size by.
-- `title` — dashboard header text.
-- `radius_range` — `c(min, max, default)` for the marker-size slider, in pixels.
 
 ## Notes
 
 - Boundaries are the contiguous US states from the **spData** package.
 - Colours are generated automatically for any number of categories.
 
-## Developing - I'am open to suggestions on improving this package.
 
-Note to myself: After editing the `#'` documentation comments, regenerate the help files and
-`NAMESPACE`, then check the package:
-
-```r
-devtools::document()
-devtools::check()
-devtools::install()
-```
