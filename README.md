@@ -22,7 +22,7 @@ devtools::install_github("isharaWijayaratne/americas")
 ```
 
 
-## The function
+## Function Description
 
 ```r
 americas(data, latitude, longitude, qualitative, quantitative,
@@ -33,8 +33,8 @@ americas(data, latitude, longitude, qualitative, quantitative,
 - `latitude`, `longitude` — coordinate column names (strings).
 - `qualitative` — categorical column names to colour by.
 - `quantitative` — numeric column names to size by.
-- `title` — dashboard header text.
-- `radius_range` — `c(min, max, default)` for the marker-size slider, in pixels.
+- `title` — dashboard header text, default is set to "Spatial Mapping".
+- `radius_range` — `c(min, max, default)` for the marker-size slider, in pixels. 
 
 ## Example
 
